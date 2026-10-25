@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ══ SEO ══ (значения обновляются из data.js автоматически) -->
+  <title>Анна &amp; Максим — Свадьба</title>
+  <meta name="description" content="Приглашение на свадьбу Анны и Максима — 12 июля 2027, Москва. Программа дня, карта и подтверждение присутствия.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Анна & Максим — Свадьба · 12 июля 2027">
+  <meta property="og:description" content="Приглашение на свадьбу: программа дня, карта и подтверждение присутствия.">
+  <meta property="og:image" content="https://images.pexels.com/photos/34362507/pexels-photo-34362507.jpeg?auto=compress&cs=tinysrgb&w=1200">
+  <meta name="theme-color" content="#c9a96e">
+
+  <!-- ══ Favicon: золотое сердечко (inline SVG) ══ -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23c9a96e' d='M12 21s-8.25-5.06-10.24-9.9C.4 7.6 2.6 4.1 6.05 4.1c2 0 3.6 1.15 4.45 2.83h3c.85-1.68 2.45-2.83 4.45-2.83 3.45 0 5.65 3.5 4.3 7-2 4.84-10.25 9.9-10.25 9.9Z'/%3E%3C/svg%3E">
+
+  <!-- ══ Шрифты Google Fonts (font-display: swap) ══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Nunito:wght@300;400;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Amatic+SC:wght@400;700&family=Raleway:wght@300;400;500&family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- ══ Стили шаблона ══ -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="is-loading" data-theme="lace">
+
+  <!-- ══════════════════ СЕКЦИЯ 0 · PRELOADER ══════════════════ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <span class="preloader-rings" data-icon="rings"></span>
+      <span class="preloader-text">Наша любовь&hellip;</span>
+      <span class="preloader-bar"><i></i></span>
+    </div>
+  </div>
+
+  <!-- ══════════════════ STICKY NAVBAR ══════════════════ -->
+  <nav class="nav" id="navbar" aria-label="Навигация по приглашению">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Наверх">
+        <span class="nav-logo-names"><i data-bind="brideName">А</i><em>&amp;</em><i data-bind="groomName">М</i></span>
+      </a>
+      <div class="nav-links">
+        <a href="#countdown" data-nav="countdown">Таймер</a>
+        <a href="#story">История</a>
+        <a href="#timeline" data-nav="timeline">Программа</a>
+        <a href="#map" data-nav="map">Карта</a>
+        <a href="#gallery" data-nav="gallery">Галерея</a>
+        <a href="#faq" data-nav="faq">Вопросы</a>
+      </div>
+      <div class="nav-right">
+        <span class="nav-badge" id="navDays"></span>
+        <a href="#rsvp" class="btn btn-sm nav-cta">Подтвердить</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════ СЕКЦИЯ 1 · HERO ══════════════════ -->
+  <header class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay" id="heroOverlay"></div>
+    <div class="hero-frame" aria-hidden="true">
+      <i class="hero-corner tl"></i><i class="hero-corner tr"></i>
+      <i class="hero-corner bl"></i><i class="hero-corner br"></i>
+    </div>
+
+    <div class="hero-content">
+      <svg class="hero-ornament h-anim" viewBox="0 0 220 26" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">
+          <circle cx="6" cy="13" r="1.6"/><path d="M10 13h66"/>
+          <path d="M84 13c7 0 9-6.5 3.5-7.5"/><path d="M84 13c7 0 9 6.5 3.5 7.5"/>
+          <path d="M110 4.5 117.5 13 110 21.5 102.5 13Z"/><circle cx="110" cy="13" r="1.5" fill="currentColor" stroke="none"/>
+          <path d="M136 13c-7 0-9-6.5-3.5-7.5"/><path d="M136 13c-7 0-9 6.5-3.5 7.5"/>
+          <path d="M144 13h66"/><circle cx="214" cy="13" r="1.6"/>
+        </g>
+      </svg>
+
+      <p class="hero-subtitle h-anim" data-bind="heroSubtitle">Мы приглашаем вас на нашу свадьбу</p>
+
+      <h1 class="hero-names h-anim">
+        <span data-bind="brideName">Анна</span>
+        <span class="amp">&amp;</span>
+        <span data-bind="groomName">Максим</span>
+      </h1>
+
+      <p class="hero-date h-anim" id="heroDate">12 · 07 · 2027</p>
+      <p class="hero-city h-anim" id="heroCity">Москва</p>
+    </div>
+
+    <a href="#countdown" class="hero-arrow h-anim" id="heroArrow" aria-label="Листайте вниз">
+      <span data-icon="chevron-down"></span>
+    </a>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════ СЕКЦИЯ 2 · ТАЙМЕР ══════════════════ -->
+    <section class="section" id="countdown" data-flag="countdownEnabled">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Обратный отсчёт</span>
+          <h2>До нашего дня</h2>
+          <div class="divider" data-divider></div>
+        </header>
+        <div class="countdown-grid reveal" id="countdownGrid">
+          <div class="count-card"><span class="count-num" id="cdDays">0</span><span class="count-label">дней</span></div>
+          <div class="count-card"><span class="count-num" id="cdHours">0</span><span class="count-label">часов</span></div>
+          <div class="count-card"><span class="count-num" id="cdMins">0</span><span class="count-label">минут</span></div>
+          <div class="count-card"><span class="count-num" id="cdSecs">0</span><span class="count-label">секунд</span></div>
+        </div>
+        <p class="countdown-done reveal" id="countdownDone" hidden>
+          <span class="done-heart" data-icon="heart"></span> Мы поженились!
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════ СЕКЦИЯ 3 · НАША ИСТОРИЯ ══════════════════ -->
+    <section class="section section-alt" id="story">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">О нас</span>
+          <h2>Наша история</h2>
+          <div class="divider" data-divider></div>
+        </header>
+        <div class="story-grid">
+          <figure class="story-photo reveal" data-delay="0">
+            <img id="storyPhoto" src="" alt="Фото пары" loading="lazy" decoding="async">
+            <span class="story-photo-deco" aria-hidden="true"></span>
+          </figure>
+          <div class="story-text reveal" data-delay="120">
+            <blockquote class="story-quote">
+              <span class="quote-mark" aria-hidden="true">&laquo;</span>
+              <p data-bind="quote"></p>
+            </blockquote>
+            <div class="story-body" id="storyBody"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ СЕКЦИЯ 4 · ПРОГРАММА ДНЯ ══════════════════ -->
+    <section class="section" id="timeline" data-flag="timelineEnabled">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Расписание</span>
+          <h2>Программа дня</h2>
+          <div class="divider" data-divider></div>
+        </header>
+        <ol class="timeline" id="timelineList"><!-- элементы строятся из data.js --></ol>
+      </div>
+    </section>
+
+    <!-- ══════════════════ СЕКЦИЯ 5 · ДЕТАЛИ ТОРЖЕСТВА ══════════════════ -->
+    <section class="section section-alt" id="details">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Всё самое важное</span>
+          <h2>Детали торжества</h2>
+          <div class="divider" data-divider></div>
+        </header>
+        <div class="details-grid">
+          <article class="detail-card reveal" data-delay="0">
+            <span class="detail-icon" data-icon="church"></span>
+            <h3>Церемония</h3>
+            <p class="detail-lead" data-bind="ceremonyTime">15:00</p>
+            <p data-bind="ceremonyVenue">Ресторан «Золотой Сад»</p>
+            <p class="detail-muted" data-bind="ceremonyAddress">ул. Цветочная, 12</p>
+          </article>
+          <article class="detail-card reveal" data-delay="90">
+            <span class="detail-icon" data-icon="dinner"></span>
+            <h3>Банкет</h3>
+            <p class="detail-lead" data-bind="banquetTime">17:00</p>
+            <p data-bind="banquetVenue">Зал «Хрустальный»</p>
+            <p class="detail-muted"><span data-bind="city">Москва</span></p>
+          </article>
+          <article class="detail-card reveal" data-delay="180">
+            <span class="detail-icon" data-icon="dress"></span>
+            <h3>Dress Code</h3>
+            <p class="detail-lead" data-bind="dressCode">Нарядный, пастельные тона</p>
+            <div class="dress-palette" id="dressPalette"></div>
+            <p class="detail-muted" data-bind="dressCodeColors"></p>
+          </article>
+          <article class="detail-card reveal" data-delay="270">
+            <span class="detail-icon" data-icon="bus"></span>
+            <h3>Трансфер</h3>
+            <p class="detail-lead" data-bind="transferInfo"></p>
+            <p class="detail-muted">Организатор: <a class="link" id="organizerLink" href="#" data-bind="organizerPhone"></a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ СЕКЦИЯ 6 · КАРТА ══════════════════ -->
+    <section class="section" id="map" data-flag="mapEnabled">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Маршрут</span>
+          <h2>Как нас найти</h2>
+          <div class="divider" data-divider></div>
+        </header>
+        <p class="map-address reveal">
+          <span data-icon="pin"></span>
+          <span><b data-bind="ceremonyVenue"></b> · <span data-bind="ceremonyAddress"></span>, <span data-bind="city"></span></span>
+        </p>
+        <div class="map-frame reveal">
+          <iframe id="mapIframe" src="" title="Карта проезда" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map-actions reveal">
+          <a class="btn btn-outline" id="yandexBtn" href="#" target="_blank" rel="noopener"><span data-icon="pin"></span> Яндекс.Карты</a>
+          <a class="btn btn-outline" id="googleBtn" href="#" target="_blank" rel="noopener"><span data-icon="pin"></span> Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ СЕКЦИЯ 7 · ГАЛЕРЕЯ ══════════════════ -->
+    <section class="section section-alt" id="gallery" data-flag="galleryEnabled">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Фотографии</span>
+          <h2>Моменты нашей любви</h2>
+          <div class="divider" data-divider></div>
+        </header>
+        <div class="gallery-grid reveal" id="galleryGrid"><!-- фото из data.js --></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ СЕКЦИЯ 8 · RSVP ══════════════════ -->
+    <section class="section" id="rsvp">
+      <div class="container container-narrow">
+        <header class="section-head reveal">
+          <span class="eyebrow">RSVP</span>
+          <h2>Подтвердите присутствие</h2>
+          <div class="divider" data-divider></div>
+          <p class="section-sub">Пожалуйста, ответьте до <b class="accent" data-bind="rsvpDeadline"></b></p>
+        </header>
+
+        <div class="rsvp-card reveal" data-delay="100">
+          <!-- Режим: форма -->
+          <form class="rsvp-form" id="rsvpForm" novalidate>
+            <div class="field">
+              <label for="fName">Имя и фамилия <i>*</i></label>
+              <input type="text" id="fName" name="name" placeholder="Ваше имя" required autocomplete="name">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="fAttend">Вы придёте? <i>*</i></label>
+                <select id="fAttend" name="attendance" required>
+                  <option value="" disabled selected>Выберите вариант</option>
+                  <option value="С радостью приду!">С радостью приду!</option>
+                  <option value="К сожалению, не смогу">К сожалению, не смогу</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="fGuests">Количество гостей</label>
+                <select id="fGuests" name="guests"></select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="fWishes">Аллергии и пожелания</label>
+              <textarea id="fWishes" name="wishes" rows="3" placeholder="Аллергии, пожелания, комментарии…"></textarea>
+            </div>
+            <div class="field">
+              <label for="fContact">Контакт (телефон или Telegram)</label>
+              <input type="text" id="fContact" name="contact" placeholder="+7 (___) ___-__-__ или @username" autocomplete="tel">
+            </div>
+            <button type="submit" class="btn btn-submit" id="rsvpSubmit">
+              <span>Отправить ответ</span><span data-icon="send"></span>
+            </button>
+            <p class="field-error" id="formError" role="alert" hidden>Пожалуйста, заполните обязательные поля.</p>
+          </form>
+
+          <!-- Режимы: telegram / phone / googleform (рендерятся скриптом) -->
+          <div class="rsvp-alt" id="rsvpAlt" hidden></div>
+
+          <!-- Успешная отправка -->
+          <div class="rsvp-success" id="rsvpSuccess" hidden>
+            <span class="success-icon" data-icon="check"></span>
+            <h3>Спасибо! Мы получили ваш ответ</h3>
+            <p data-bind="thankYouText"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ СЕКЦИЯ 9 · FAQ ══════════════════ -->
+    <section class="section section-alt" id="faq" data-flag="faqEnabled">
+      <div class="container container-narrow">
+        <header class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Часто задаваемые вопросы</h2>
+          <div class="divider" data-divider></div>
+        </header>
+        <div class="faq-list reveal" id="faqList"><!-- вопросы из data.js --></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ СЕКЦИЯ 10 · ПОДАРКИ (опционально) ══════════════════ -->
+    <section class="section" id="gifts" data-flag="giftEnabled">
+      <div class="container container-narrow">
+        <header class="section-head reveal">
+          <span class="eyebrow">Подарки</span>
+          <h2>Пожелания для нас</h2>
+          <div class="divider" data-divider></div>
+        </header>
+        <div class="gift-card reveal">
+          <span class="gift-icon" data-icon="gift"></span>
+          <p class="gift-text" data-bind="giftText"></p>
+          <p class="gift-note" data-bind="giftNote"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ СЕКЦИЯ 11 · QR + КАЛЕНДАРЬ ══════════════════ -->
+    <section class="section section-alt" id="qr" data-flag="qrEnabled">
+      <div class="container container-narrow">
+        <header class="section-head reveal">
+          <span class="eyebrow">Не забудьте</span>
+          <h2>Сохраните дату</h2>
+          <div class="divider" data-divider></div>
+        </header>
+        <div class="qr-grid reveal">
+          <figure class="qr-box">
+            <img id="qrImage" src="" alt="QR-код приглашения" width="220" height="220" loading="lazy">
+            <figcaption>Сканируйте, чтобы открыть приглашение</figcaption>
+          </figure>
+          <div class="qr-actions">
+            <p class="qr-date accent" data-bind="displayDate"></p>
+            <p class="qr-venue"><span data-bind="ceremonyVenue"></span>, <span data-bind="city"></span></p>
+            <div class="qr-buttons">
+              <button class="btn" id="icsBtn" type="button"><span data-icon="calendar"></span> В календарь (.ics)</button>
+              <a class="btn btn-outline" id="gcalBtn" href="#" target="_blank" rel="noopener"><span data-icon="calendar"></span> Google Календарь</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ СЕКЦИЯ 12 · МУЗЫКА (опционально) ══════════════════ -->
+    <section class="section" id="music" data-flag="musicEnabled">
+      <div class="container container-narrow">
+        <header class="section-head reveal">
+          <span class="eyebrow">Саундтрек</span>
+          <h2 data-bind="songTitle">Наша песня</h2>
+          <div class="divider" data-divider></div>
+        </header>
+        <div class="music-player reveal" id="musicPlayer"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════ СЕКЦИЯ 13 · FOOTER ══════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <svg class="footer-ornament" viewBox="0 0 220 26" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">
+          <circle cx="6" cy="13" r="1.6"/><path d="M10 13h66"/>
+          <path d="M84 13c7 0 9-6.5 3.5-7.5"/><path d="M84 13c7 0 9 6.5 3.5 7.5"/>
+          <path d="M110 4.5 117.5 13 110 21.5 102.5 13Z"/><circle cx="110" cy="13" r="1.5" fill="currentColor" stroke="none"/>
+          <path d="M136 13c-7 0-9-6.5-3.5-7.5"/><path d="M136 13c-7 0-9 6.5-3.5 7.5"/>
+          <path d="M144 13h66"/><circle cx="214" cy="13" r="1.6"/>
+        </g>
+      </svg>
+      <div class="footer-hearts" aria-hidden="true"><i>&#9825;</i><i>&#9825;</i><i>&#9825;</i></div>
+      <p class="footer-names" id="footerNames"></p>
+      <a class="footer-hashtag" id="footerHashtag" href="#" target="_blank" rel="noopener"></a>
+      <div class="footer-contacts">
+        <a id="fcPhone" href="#" aria-label="Позвонить"><span data-icon="phone"></span></a>
+        <a id="fcMail" href="#" aria-label="Написать письмо"><span data-icon="mail"></span></a>
+        <a id="fcWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><span data-icon="message"></span></a>
+        <a id="fcTg" href="#" target="_blank" rel="noopener" aria-label="Telegram"><span data-icon="send"></span></a>
+      </div>
+      <p class="footer-thanks" data-bind="thankYouText"></p>
+      <p class="footer-made">Сделано с любовью</p>
+      <p class="footer-credit" id="footerCredit"><a id="creditLink" href="#" target="_blank" rel="noopener"></a></p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════ LIGHTBOX ══════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+    <button class="lb-close" id="lbClose" aria-label="Закрыть"><span data-icon="x"></span></button>
+    <button class="lb-prev" id="lbPrev" aria-label="Предыдущее фото"><span data-icon="chevron-left"></span></button>
+    <figure class="lb-figure"><img id="lbImage" src="" alt=""><figcaption id="lbCounter"></figcaption></figure>
+    <button class="lb-next" id="lbNext" aria-label="Следующее фото"><span data-icon="chevron-right"></span></button>
+  </div>
+
+  <!-- ══════════════════ ПЛАВАЮЩАЯ RSVP-КНОПКА (мобильные) ══════════════════ -->
+  <a href="#rsvp" class="fab" id="fabRsvp" aria-label="Подтвердить присутствие"><span data-icon="heart"></span></a>
+
+  <!-- ══════════════════ ПЛАВАЮЩАЯ КНОПКА МУЗЫКИ (опционально) ══════════════════ -->
+  <button class="music-fab" id="musicFab" aria-label="Включить музыку" hidden><span data-icon="music"></span></button>
+
+  <!-- ══════════════════ СКРИПТЫ (сначала данные, потом логика) ══════════════════ -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
